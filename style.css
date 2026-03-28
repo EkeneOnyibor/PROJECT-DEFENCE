@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8e9d9;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*===== CONTAINER======== */
+.container {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.balance {
+    background-color: hsl(10, 79%, 65%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    padding: 28px 32px;
+}
+
+.balance-text {
+    display: grid;
+    gap: 10px;
+}
+
+.balance-label {
+    color: hsl(26, 66%, 93%);
+    font-size: 14px;
+}
+
+.balance-amount {
+    color: hsl(26, 66%, 93%);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.balance-logo {
+    display: flex;
+    position: relative;
+    width: 60px;
+    height: 40px;
+}
+
+.circle-left {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-color: white;
+    position: absolute;
+    top: 0;
+    background-color: #ff9c85;
+    left: 0;
+}
+
+.circle-right {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 18px;
+    background-color: #000000;
+    opacity: 1;
+}
+
+/* CARD 2 */
+.chart-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 32px;
+}
+
+.chart-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: hsl(25, 47%, 15%);
+    margin-bottom: 40px;
+}
+
+/* BAR-CHART */
+.bar-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 180px;
+    margin-bottom: 12px;
+    gap: 12px;
+}
+
+/* EACH BAR COLUMN (BAR + LABEL) */
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+    gap: 8px;
+    position: relative;
+}
+
+/* THE ACTUAL BAAR */
+.bar {
+    width: 100%;
+    border-radius: 6px;
+    background-color:hsl(10, 79%, 65%);
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    position: relative;
+    overflow: visible;
+}
+
+/* Today's bar is teal */
+.bar.today {
+    background-color: hsl(186, 34%, 65%);
+}
+
+.bar:hover {
+    opacity: 0.7;
+}
+
+/* Toooltip */
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0e0f06;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    z-index: 10;
+}
+.bar:hover .tooltip{
+    visibility: visible;
+}
+.bar:hover{
+    display: block;
+}
+/* Day label under bar */
+.bar-label{
+    font-size: 12px;
+    color: #af9b8d;
+}
+.divider{
+    height: 1px;
+    background-color: #e0ccbc;
+    margin: 24px  0;
+}
+/* =====FOOTER====== */
+.chart-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 50px;
+    
+    .total{
+        font-size: 13px;
+        color:#af9b8d ;
+        margin-bottom: 4px;
+    }
+    .h1{
+        font-size: 32px;
+        font-weight: 700;
+        color: #382314;
+    }
+}
+.footer-right{
+    text-align: right;
+}
+.percent{
+    font-size: 16px;
+    font-weight:700 ;
+    color: #382314;
+}
+.text{
+    font-size: 13px;
+    color: #af9b8d;
+}
+.attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+
+/* =====MOBILE (375px)==== */
+@media(max-width: 480px) {
+    .container{
+        padding: 16px;
+    }
+    .balance-amount{
+        font-size: 24px;
+    }
+    .chart-title{
+        font-size: 18px;
+    }
+    .bar-chart{
+        height: 140px;
+        gap: 8px;
+    }
+    .h1{
+        font-size: 24px;
+    }
+}
