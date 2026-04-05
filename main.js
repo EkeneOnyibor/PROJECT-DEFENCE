@@ -37,3 +37,8 @@ fetch('data.json')
       chart.appendChild(group);
     });
   });
+
+  const toggleBtn = document.getElementById('toggleBtn');
+  toggleBtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark');
+  });

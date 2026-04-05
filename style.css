@@ -53,6 +53,7 @@ body {
     position: relative;
     width: 60px;
     height: 40px;
+    cursor: pointer;
 }
 
 .circle-left {
@@ -223,4 +224,46 @@ body {
     .h1{
         font-size: 24px;
     }
+}
+/* ===== DARK MODE ===== */
+body.dark {
+  background-color: #1a1a2e;
+}
+
+body.dark .chart-card {
+  background-color: #2a2a3e;
+}
+
+body.dark .chart-title {
+  color: #ffffff;
+}
+
+body.dark .footer-amount {
+  color: #ffffff;
+}
+
+body.dark .footer-percentage {
+  color: #ffffff;
+}
+
+body.dark .footer-label,
+body.dark .footer-compare,
+body.dark .bar-label{
+  color: #aaaaaa;
+}
+body.dark .chart-footer{
+    color: white;
+}
+body.dark .percent{
+    color: white;
+}
+
+body.dark .divider {
+  background-color: #444466;
+}
+.circle-right{
+    transition: transform 0.3s ease;
+}
+body.dark .circle-right{
+    transform: translateX(-18px);
 }
